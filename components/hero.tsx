@@ -21,6 +21,9 @@ export function Hero() {
     setDots(newDots)
   }, [])
 
+  // The YouTube URL for the demo video
+  const YOUTUBE_DEMO_URL = "https://youtu.be/rEDcHl1F0ck?si=lRMN3DkVfqIoAybi"
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#0A0A0A]">
       <div className="absolute inset-0 bg-gradient-radial from-[rgba(0,217,255,0.1)] via-transparent to-transparent" />
@@ -88,9 +91,15 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-6 justify-center mb-20 animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
         >
-          <button className="px-12 py-5 bg-gradient-to-r from-[#00D9FF] to-[#00A8CC] text-[#0A0A0A] rounded-xl font-bold uppercase tracking-wider hover:shadow-[0_8px_24px_rgba(0,217,255,0.4)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+          {/* 👇 MODIFIED: Changed to <a> and added link attributes */}
+          <a
+            href={YOUTUBE_DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-12 py-5 bg-gradient-to-r from-[#00D9FF] to-[#00A8CC] text-[#0A0A0A] rounded-xl font-bold uppercase tracking-wider hover:shadow-[0_8px_24px_rgba(0,217,255,0.4)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3"
+          >
             <span>▶</span> Watch Demo
-          </button>
+          </a>
           <a
             href="https://github.com/QUICShift/QUICShift"
             target="_blank"
